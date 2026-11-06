@@ -1,0 +1,40 @@
+@import "tailwindcss";
+@import "./design-tokens.css";
+
+:root {
+  color-scheme: dark;
+  font-family: var(--typography-family-sans), var(--typography-family-table-fallback), Arial, sans-serif;
+  font-size: var(--typography-body-size);
+  font-weight: var(--typography-weight-regular);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  min-width: 320px;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  background: var(--color-background-canvas);
+  color: var(--color-text-primary);
+}
+
+::selection {
+  color: var(--color-background-canvas);
+  background: var(--color-accent-brand);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
